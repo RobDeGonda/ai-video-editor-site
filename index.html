@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raw footage in. Finished cut out.</title>
+<meta name="description" content="Turn long raw GoPro, event and vlog footage into a finished YouTube cut plus Shorts, revised by chat. Join the early access waitlist.">
+<style>
+  :root {
+    --bg: #fbfaf7; --fg: #1a1a1a; --muted: #5c5c5c; --card: #ffffff;
+    --line: #e3e0d8; --accent: #1f5eff; --accent-fg: #ffffff; --ok: #1a7f4b; --err: #b3261e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212; --fg: #f1efe9; --muted: #a6a39a; --card: #1b1b1b;
+      --line: #2e2d2a; --accent: #6b94ff; --accent-fg: #0b0b0b; --ok: #5fd08e; --err: #ff8a80;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 16px; }
+  section { padding: 56px 0; }
+  h1 { font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.1; margin: 0 0 16px; letter-spacing: -0.02em; }
+  h2 { font-size: 1.6rem; margin: 0 0 20px; letter-spacing: -0.01em; }
+  p { margin: 0 0 16px; }
+  .sub { font-size: 1.15rem; color: var(--muted); max-width: 640px; }
+  .btn { display: inline-block; background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 8px; padding: 12px 22px; font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; }
+  .btn:disabled { opacity: .6; cursor: default; }
+  .tag { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 12px; }
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .compare figure { margin: 0; }
+  .compare figcaption { font-weight: 600; margin-bottom: 8px; }
+  .frame { position: relative; aspect-ratio: 16 / 9; background: #000; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); }
+  .frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .steps { list-style: none; counter-reset: s; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .steps li { counter-increment: s; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+  .steps li::before { content: counter(s); display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: var(--accent-fg); font-weight: 700; margin-bottom: 10px; }
+  .steps h3 { margin: 0 0 6px; font-size: 1.05rem; }
+  .steps p { margin: 0; color: var(--muted); font-size: .95rem; }
+  .steps em { color: var(--fg); }
+  form { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 24px; max-width: 520px; }
+  label { display: block; font-weight: 600; margin-bottom: 14px; }
+  input[type=email], select { display: block; width: 100%; margin-top: 6px; padding: 11px 12px; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  #msg { margin: 14px 0 0; min-height: 1.4em; font-size: .95rem; }
+  #msg.ok { color: var(--ok); } #msg.err { color: var(--err); }
+  .privacy { font-size: .9rem; color: var(--muted); max-width: 520px; margin-top: 16px; }
+  footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: .9rem; }
+  @media (max-width: 700px) { .compare, .steps { grid-template-columns: 1fr; } section { padding: 40px 0; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap" style="padding-top:64px;padding-bottom:24px">
+    <div class="tag">Early access</div>
+    <h1>Raw footage in. Finished YouTube cut and Shorts out.</h1>
+    <p class="sub">Drop in long GoPro runs, event days or vlog takes. Say what you want, get a first cut back, and revise it by chat. No editor to learn.</p>
+    <a class="btn" href="#waitlist">Join the waitlist</a>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>See the difference</h2>
+      <div class="compare">
+        <figure>
+          <figcaption>Raw footage</figcaption>
+          <div class="frame">
+            <!-- PLACEHOLDER: replace REPLACE_WITH_RAW_VIDEO_ID with the unlisted YouTube video ID -->
+            <iframe src="https://www.youtube-nocookie.com/embed/REPLACE_WITH_RAW_VIDEO_ID" title="Raw footage" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </figure>
+        <figure>
+          <figcaption>Finished cut</figcaption>
+          <div class="frame">
+            <!-- PLACEHOLDER: replace REPLACE_WITH_FINISHED_VIDEO_ID with the unlisted YouTube video ID -->
+            <iframe src="https://www.youtube-nocookie.com/embed/REPLACE_WITH_FINISHED_VIDEO_ID" title="Finished cut" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><h3>Upload your raw footage</h3><p>Add the chapters straight from your camera. Long files are fine.</p></li>
+        <li><h3>Say what you want</h3><p>For example: <em>Milk mile race. Make a 3 minute YouTube cut and 3 Shorts.</em></p></li>
+        <li><h3>Revise by chat, then export</h3><p>Ask for changes in plain words, preview each version, and export when it looks right.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="waitlist">
+    <div class="wrap">
+      <h2>Get early access</h2>
+      <p class="sub" style="margin-bottom:20px">We are building this now. Tell us what you shoot and we will email you when invites open.</p>
+      <form id="wl" novalidate>
+        <label>Email
+          <input type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+        </label>
+        <label>What kind of footage do you shoot?
+          <select name="footage_type" required>
+            <option value="" selected disabled>Choose one</option>
+            <option value="action">Action (GoPro, sports, travel)</option>
+            <option value="event">Events</option>
+            <option value="vlog">Vlogs and talking head</option>
+            <option value="other">Something else</option>
+          </select>
+        </label>
+        <label>Hours of raw footage per month
+          <select name="hours_per_month" required>
+            <option value="" selected disabled>Choose one</option>
+            <option value="under_1">Under 1 hour</option>
+            <option value="1_to_5">1 to 5 hours</option>
+            <option value="5_to_20">5 to 20 hours</option>
+            <option value="over_20">Over 20 hours</option>
+          </select>
+        </label>
+        <div class="hp" aria-hidden="true">
+          <label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <button class="btn" type="submit" id="go">Join the waitlist</button>
+        <p id="msg" role="status" aria-live="polite"></p>
+      </form>
+      <p class="privacy">Privacy: we do not train on your footage, and we delete your data on request. We only use your email to tell you when access opens.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">AI video editor, early access.</div>
+</footer>
+
+<script>
+  // PLACEHOLDERS: fill these two values. Use ONLY the public anon (publishable) key.
+  // Never put a service_role or secret key in this file.
+  const SUPABASE_URL = "REPLACE_WITH_SUPABASE_PROJECT_URL";   // e.g. https://abcdxyz.supabase.co
+  const SUPABASE_ANON_KEY = "REPLACE_WITH_SUPABASE_ANON_KEY";
+
+  const form = document.getElementById("wl");
+  const msg = document.getElementById("msg");
+  const btn = document.getElementById("go");
+  const show = (t, cls) => { msg.textContent = t; msg.className = cls || ""; };
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const d = new FormData(form);
+    const email = (d.get("email") || "").trim();
+    const footage = d.get("footage_type");
+    const hours = d.get("hours_per_month");
+
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return show("Enter a valid email address.", "err");
+    if (!footage || !hours) return show("Choose a footage type and hours per month.", "err");
+
+    // Honeypot: bots fill the hidden field. Pretend success, send nothing.
+    if (d.get("website")) { form.reset(); return show("You are on the list. Thank you.", "ok"); }
+
+    if (SUPABASE_URL.startsWith("REPLACE_") || SUPABASE_ANON_KEY.startsWith("REPLACE_")) {
+      return show("The form is not connected yet. Please check back soon.", "err");
+    }
+
+    btn.disabled = true; show("Sending...");
+    try {
+      const res = await fetch(SUPABASE_URL + "/rest/v1/waitlist", {
+        method: "POST",
+        headers: {
+          "apikey": SUPABASE_ANON_KEY,
+          "Authorization": "Bearer " + SUPABASE_ANON_KEY,
+          "Content-Type": "application/json",
+          "Prefer": "return=minimal"
+        },
+        body: JSON.stringify({ email, footage_type: footage, hours_per_month: hours })
+      });
+      // 409 = email already on the list; treat as success.
+      if (res.ok || res.status === 409) { form.reset(); show("You are on the list. Thank you.", "ok"); }
+      else show("Something went wrong. Please try again.", "err");
+    } catch (_) {
+      show("Network error. Please try again.", "err");
+    } finally { btn.disabled = false; }
+  });
+</script>
+</body>
+</html>

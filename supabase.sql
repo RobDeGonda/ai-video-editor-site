@@ -7,7 +7,8 @@ create table public.waitlist (
   footage_type text not null
     check (footage_type in ('action','event','vlog','other')),
   hours_per_month text not null
-    check (hours_per_month in ('under_1','1_to_5','5_to_20','over_20'))
+    check (hours_per_month in ('under_1','1_to_5','5_to_20','over_20')),
+  share_footage boolean not null default false
 );
 
 alter table public.waitlist enable row level security;
